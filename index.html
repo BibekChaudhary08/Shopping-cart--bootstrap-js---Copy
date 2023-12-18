@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/54c6fb1b14.js"crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="container_fluid cart_section">
+    <div class="container p-lg-2">
+       <div class="row">
+          <!--Left Side items, quantity, etc-->
+            <div class="col-lg-8 col-md-12 col-12 bg-white">
+                <!--items-1-->
+                <div class="row">
+                    <div class="col">
+                       <h1>Cart (2 Items)</h1>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="cart_img_container col-lg-3 col-md-4 col-12 d-flex justify-content-center align-items-center pb-2">
+                     <div class="card" style="width: 10rem;">
+                        <img src="img/cart_img1.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-4">
+                        <h3>Blue Zara Shirt</h3>
+                        <p>SHIRT BLUE</p>
+                        <p>COLOR BLUE</p>
+                        <P>SIZE M</P>
+                        <p><i class="fa-solid fa-trash"></i> REMOVE ITEM</p>
+                     </div>
+
+                     <div class="col-lg-3 col-md-2 col-4 mt-auto">
+                        <p><i class="fa-solid fa-heart"></i> MOVE TO WISHLIST</p>
+                     </div>
+
+                     <div class="col-lg-3 col-md-3 col-4 mt-sm-3 d-flex flex-column mt-2">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><button class="page-link btn-sm" id="firstcart_qty_dec"><i class="fa-solid fa-minus" style="font-size: 0.8rem;"></i></button></li>
+                                    <li class="page-item"><input type="text" class="custom_input page-link w-100" id="firstcustom_input" value="0"></input></li>
+                                    <li class="page-item"><button class="page-link btn-sm" id="firstcart_qty_inc"><i class="fa-solid fa-plus" style="font-size: 0.8rem;"></i></button></li>
+                                </ul>
+                            </nav>
+                            <h3 class="mt-auto"><p>$<span id="firstcart_price">0.00</span></p></h3>
+                     </div>
+                </div>
+
+               <!--items-2-->
+               <div class="border-top border-dark pt-3 row mb-3">
+                  <div class="cart_img_container col-lg-3 col-md-4 col-12 d-flex justify-content-center align-items-center pb-2">
+                   <div class="card" style="width: 10rem;">
+                      <img src="img/cart_img2.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-3 col-4 mt-sm-3">
+                      <h3>Blue Zara Shirt</h3>
+                      <p>SHIRT BLUE</p>
+                      <p>COLOR BLUE</p>
+                      <P>SIZE M</P>
+                      <p><i class="fa-solid fa-trash"></i> REMOVE ITEM</p>
+                   </div>
+
+                   <div class="col-lg-3 col-md-2 col-4 mt-auto">
+                      <p><i class="fa-solid fa-heart"></i> MOVE TO WISHLIST</p>
+                   </div>
+
+                   <div class="col-lg-3 col-md-3 col-4 mt-sm-3 d-flex flex-column mt-2">
+                          <nav aria-label="Page navigation example">
+                              <ul class="pagination">
+                                  <li class="page-item"><button class="page-link btn-sm" id="secondcart_qty_dec"><i class="fa-solid fa-minus" style="font-size: 0.6rem;"></i></button></li>
+                                  <li class="page-item"><input type="text" class="custom_input page-link w-100" id="secondcustom_input" value="0"></input></li>
+                                  <li class="page-item"><button class="page-link btn-sm" id="secondcart_qty_inc"><i class="fa-solid fa-plus" style="font-size: 0.6rem;"></i></button></li>
+                              </ul>
+                          </nav>
+                          <h3 class="mt-auto"><p>$<span id="secondcart_price">0.00</span></p></h3>
+                   </div>
+               </div>
+         </div>
+
+             
+
+          <!--Right Side total amount section-->
+            <div class="col-lg-4 col-md-12 col-12 p-0 p-md-0 px-lg-2 mt-md-2 mt-sm-2 mt-lg-0 mt-2">
+               <div class="cart_total bg-white p-2">
+               <div class="row">
+                  <div class="col pb-3">
+                     <h2>The Total Amount Of</h2>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col d-flex justify-content-between pb-1">
+                     <h5>product amount</h5>
+                     <h5>$<span id="cartproduct_amount">0.00</span></h5>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col d-flex justify-content-between pb-1">
+                     <h5>shipping charge</h5>
+                     <h5>$<span id="cart_shippingcharge">0.00</span></h5>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col d-flex justify-content-between pb-3">
+                     <h5>Total Vat Amount</h5>
+                     <h5>$<span id="cart_vatamount">0.00</span></h5>
+                  </div>
+               </div>
+
+               <div class="row border-top">
+                  <div class="col d-flex justify-content-between pt-2">
+                     <h5 class="">The total amount (including VAT)</h5>
+                     <h5>$<span id="cart_totalAmount">0.00</span></h5>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col pt-2">
+                     <button type="button" class="btn btn-primary" id="cart_checkout">CHECKOUT</button>
+                  </div>
+               </div>
+               </div>
+ 
+               <div class="cart_discount bg-white p-2 mt-2">
+                  <div class="row">
+                  <div class="col d-flex justify-content-between">
+                      <h5>Add a Discount Code (option)</h5>
+                  </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <input type="text" class="form-control" id="cart_discountcode" value="" placeholder="add discount code" aria-label="Username" aria-describedby="basic-addon1">
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p id="cart_discounttrue"></p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <button type="button" class="btn btn-primary" id="cart_applycode">Apply</button>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="delivery_date bg-white mt-2 p-3">
+                  <div class="row">
+                     <div class="col">
+                         <h3>Expected delivery date</h3>
+                         <p>........</p>
+                     </div>
+                  </div>
+               </div>
+
+               
+
+
+       </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+   
+     let firstcustom_input = document.getElementById('firstcustom_input');
+     let firstcart_qty_dec = document.getElementById('firstcart_qty_dec');
+     let firstcart_qty_inc = document.getElementById('firstcart_qty_inc');
+     let secondcustom_input = document.getElementById('secondcustom_input');
+     let secondcart_qty_dec = document.getElementById('secondcart_qty_dec');
+     let secondcart_qty_inc = document.getElementById('secondcart_qty_inc');
+     let firstcart_total = 0;
+     let secondcart_total = 0
+     let firstcart_price = document.getElementById('firstcart_price');
+     let secondcart_price = document.getElementById('secondcart_price');
+     let cartproduct_amount = document.getElementById('cartproduct_amount');
+     let cart_shippingcharge = document.getElementById('cart_shippingcharge');
+     let cart_vatamount = document.getElementById('cart_vatamount');
+     let cart_checkout = document.getElementById('cart_checkout');
+     let cart_totalAmount = document.getElementById('cart_totalAmount');
+     let cart_discountcode = document.getElementById('cart_discountcode');
+     let cart_applycode = document.getElementById('cart_applycode');
+     let cart_discounttrue = document.getElementById('cart_discounttrue');
+
+     function cartQty(){
+     // for to increase and decrease cart quantity
+
+     // to increase value of first cart
+          firstcart_qty_inc.addEventListener("click", function(){
+            if(firstcart_total < 10){
+               firstcart_total++;
+            firstcustom_input.value = firstcart_total;
+            console.log(firstcustom_input);
+            firstcart_price.innerHTML = firstcustom_input.value * 20;
+            totalProduct();
+            }
+            else{
+               alert("max.no of item selected");
+            }
+          })
+
+     // to decrease value of first cart
+          firstcart_qty_dec.addEventListener("click", function(){
+            if(firstcart_total > 0){
+               firstcart_total--;
+            firstcustom_input.value = firstcart_total;
+            console.log(firstcustom_input);
+            firstcart_price.innerHTML = firstcustom_input.value * 20;
+            totalProduct();
+            }
+            else{
+               alert("select no. of items");
+            }
+          })  
+
+
+           // to increase value of second cart
+           secondcart_qty_inc.addEventListener("click", function(){
+            if(secondcart_total < 10){
+               secondcart_total++;
+            secondcustom_input.value = secondcart_total;
+            console.log(secondcustom_input);
+            secondcart_price.innerHTML = secondcustom_input.value * 20;
+            totalProduct();
+            }
+            else{
+               alert("max.no of item selected");
+            }
+          })
+
+     // to decrease value of second cart
+          secondcart_qty_dec.addEventListener("click", function(){
+            if(secondcart_total > 0){
+               secondcart_total--;
+            secondcustom_input.value = secondcart_total;
+            console.log(secondcustom_input);
+            secondcart_price.innerHTML = secondcustom_input.value * 20;
+            totalProduct();
+            }
+            else{
+               alert("select no. of items");
+            }
+          })  
+          totalProduct();
+          
+     }
+
+     // to calculate total amount including vat and discount
+     function totalProduct() {
+     let firstCartItemPrice = parseFloat(firstcart_price.innerHTML);   // convert string to no.
+     let secondCartItemPrice = parseFloat(secondcart_price.innerHTML)  // convert string to no.
+     cartproduct_amount.innerHTML = firstCartItemPrice + secondCartItemPrice;
+     console.log(cartproduct_amount.innerHTML);
+   
+     // to calculate shipping charge
+     if(cartproduct_amount.innerHTML < 50){
+      cart_shippingcharge.innerHTML = 0;
+     }
+     if(cartproduct_amount.innerHTML >= 50){
+      cart_shippingcharge.innerHTML = 5;
+     }
+     if(cartproduct_amount.innerHTML >= 100){
+      cart_shippingcharge.innerHTML = 10;
+     }
+     if(cartproduct_amount.innerHTML >= 200){
+      cart_shippingcharge.innerHTML = 15;
+     }
+     if(cartproduct_amount.innerHTML >= 300){
+      cart_shippingcharge.innerHTML = 20;
+     }
+     if(cartproduct_amount.innerHTML == 400){
+      cart_shippingcharge.innerHTML = 25;
+     }
+
+     // to calculate vat amount in $ (13% vat)
+     if(cartproduct_amount.innerHTML < 50){
+     cart_vatamount.innerHTML = 0;
+     }
+     if(cartproduct_amount.innerHTML >= 50){
+     cart_vatamount.innerHTML = (13/100) * cartproduct_amount.innerHTML;
+     }
+
+     // to calculate total amount with vat, no discount
+     cart_checkout.addEventListener("click", function(){
+     cart_totalAmount.innerHTML = parseFloat(cartproduct_amount.innerHTML) + parseFloat(cart_shippingcharge.innerHTML) + parseFloat(cart_vatamount.innerHTML);
+     console.log(cart_totalAmount.innerHTML); 
+     })
+     
+
+    }  
+
+    // for discount 
+    let discountapplied = false;    // if we not do this then the whenever we click on the discount button then it will give and give discount
+
+   cart_applycode.addEventListener("click", function(){ 
+         if(!discountapplied && cart_discountcode.value === "bibek"){
+         cart_totalAmount.innerHTML = parseFloat(cart_totalAmount.innerHTML) - 10;
+         console.log(cart_totalAmount.innerHTML);
+         discountapplied = true;
+         cart_discounttrue.innerHTML = "Congratulation! you got $10 discount";
+         }
+         else{
+            cart_discounttrue.innerHTML = "Please enter valid Discount code";
+            cart_totalAmount.innerHTML = parseFloat(cartproduct_amount.innerHTML) + parseFloat(cart_shippingcharge.innerHTML) + parseFloat(cart_vatamount.innerHTML);
+            
+         }
+   })   
+
+     cartQty();
+
+    </script>
+  </body>
+</html>

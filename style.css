@@ -1,0 +1,31 @@
+.cart_section{
+    background: linear-gradient(#c2d7d7, #fb9292);
+}
+.cart_img_container{
+    background: linear-gradient(white, rgb(218, 212, 212));
+}
+.pagination li button{
+    cursor: pointer;
+    background: linear-gradient(rgba(85, 81, 68, 0.173), rgb(80, 206, 76))
+}
+.pagination li button:hover{
+    cursor: pointer;
+    background: linear-gradient(rgb(136, 198, 136), rgb(199, 97, 97))
+}
+.pagination li input{
+    cursor: pointer;
+    max-width: 4rem;
+    background: linear-gradient(rgb(133, 188, 133), rgb(201, 211, 122))
+    
+}
+.pagination li input:hover{
+    cursor: pointer;
+    background: linear-gradient(rgb(136, 198, 136), rgb(199, 97, 97))
+}
+.pagination li i, .custom_input{
+    cursor: pointer;
+    color: black;
+    font-weight: 900;
+}
+
+
